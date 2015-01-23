@@ -1,0 +1,31 @@
+<article>
+    <header>
+        <h1><?php echo e($selection['title']); ?></h1>
+    </header>
+
+    <section>
+
+        <ol>
+            <?php foreach($selection['products'] as $product): ?>
+            <li>
+                <div>
+                    <h2><?php echo e($product['brand']['name']); ?> <?php echo e($product['name']); ?></h2>
+                    <p><?php echo e($product['description']); ?></p>
+
+                    <ol>
+                        <?php foreach($product['offers'] as $offer): ?>
+                        <li>
+                            <div>
+                                <h4><?php echo e($offer['shop']['name']); ?></h4>
+                                <?php echo e($offer['price']); ?>
+
+                            </div>
+                        </li>
+                        <?php endforeach; ?>
+                    </ol>
+                </div>
+            </li>
+            <?php endforeach; ?>
+        </ol>
+    </section>
+</article>
