@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "68df30f718aba5f5f6b8c5b3216fde2f",
+    "hash": "cda42a1260b52a1cfaa58617c873381c",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2014,13 +2014,51 @@
                 "environment"
             ],
             "time": "2014-12-05 15:19:21"
+        },
+        {
+            "name": "yandex/translate-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yandex-php/translate-api.git",
+                "reference": "3029f20f0544deecabe08f3a234027a5e06c46dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yandex-php/translate-api/zipball/3029f20f0544deecabe08f3a234027a5e06c46dc",
+                "reference": "3029f20f0544deecabe08f3a234027a5e06c46dc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "~5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yandex\\Translate\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Gusakov",
+                    "email": "dev@nkt.me"
+                }
+            ],
+            "description": "Client for Yandex.Translate API",
+            "time": "2014-10-21 04:13:08"
         }
     ],
     "packages-dev": null,
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "fabpot/goutte": 20
+        "fabpot/goutte": 20,
+        "yandex/translate-api": 20
     },
     "prefer-stable": false,
     "platform": [],

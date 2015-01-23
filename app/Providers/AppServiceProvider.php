@@ -1,6 +1,8 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Yandex\Translate\Translator;
+use Yandex\Translate\Translation;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -29,6 +31,10 @@ class AppServiceProvider extends ServiceProvider {
 			'Illuminate\Contracts\Auth\Registrar',
 			'App\Services\Registrar'
 		);
+
+		$this->app->instance('Yandex\Translate\Translator', function($app) {
+			return new Translator(getenv('YANDEX_API_KEY'));
+		});
 	}
 
 }
